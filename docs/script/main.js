@@ -35,7 +35,7 @@ btnCalculo.addEventListener('click', ()=>{
 
 
     if (valorFinal <= 0.15){
-         resultadoImg.src = './docs/ims/lampada-verde.png';
+         resultadoImg.src = './ims/lampada-verde.png';
      } else if ((valorFinal >= 0.16) && (valorFinal < 1.50)){
           resultadoImg.src = './ims/lampada-amarela.png'; 
      } else if (valorFinal > 1.5){
