@@ -25,6 +25,7 @@ form.addEventListener("submit", function(e){
 
     if(senha.value < 4){
         alert('a senha deve conter ao menos 4 digitos');
+        return
     }
 
     alert('enviado com sucesso!');
