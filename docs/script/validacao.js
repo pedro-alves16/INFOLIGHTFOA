@@ -17,7 +17,7 @@ form.addEventListener("submit", function(e){
     }
 
     telefone.value = telefone.value.replace(/\D/g, "");
-    if (telefone.value.length < 10) {
+    if (telefone.value.length < 11) {
         alert("Digite um telefone válido.");
         return;
     }
