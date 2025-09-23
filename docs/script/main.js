@@ -34,11 +34,11 @@ btnCalculo.addEventListener('click', ()=>{
     });
 
 
-    if (valorFinal <= 0.15){
+    if (valorFinal <= 0.25){
          resultadoImg.src = './ims/lampada-verde.png';
-     } else if ((valorFinal >= 0.16) && (valorFinal < 1.50)){
+     } else if ((valorFinal >= 0.26) && (valorFinal < 2.00)){
           resultadoImg.src = './ims/lampada-amarela.png'; 
-     } else if (valorFinal > 1.5){
+     } else if (valorFinal > 2.00){
           resultadoImg.src = './ims/lampada-vermelha.png';
     }
     
