@@ -2,6 +2,7 @@ const form = document.getElementById("formulario");
 const nome = document.getElementById("nome");
 const email = document.getElementById("email");
 const telefone = document.getElementById("telefone");
+const senha = document.getElementById('senha');
 
 form.addEventListener("submit", function(e){
     e.preventDefault(); 
@@ -20,6 +21,10 @@ form.addEventListener("submit", function(e){
     if (telefone.value.length < 11) {
         alert("Digite um telefone válido.");
         return;
+    }
+
+    if(senha.value < 4){
+        alert('a senha deve conter ao menos 4 digitos');
     }
 
     alert('enviado com sucesso!');
