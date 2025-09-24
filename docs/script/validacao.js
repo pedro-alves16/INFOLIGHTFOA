@@ -3,6 +3,7 @@ const nome = document.getElementById("nome");
 const email = document.getElementById("email");
 const telefone = document.getElementById("telefone");
 const senha = document.getElementById('senha');
+const botaoLogin = document.getElementById('login-button');
 
 form.addEventListener("submit", function(e){
     e.preventDefault(); 
@@ -25,7 +26,7 @@ form.addEventListener("submit", function(e){
 
     if(senha.value < 4){
         alert('a senha deve conter ao menos 4 digitos');
-        return
+        return;
     }
 
     alert('enviado com sucesso!');
@@ -36,4 +37,21 @@ telefone.addEventListener("input", e => {
     let valor = e.target.value.replace(/\D/g, "");
     valor = valor.length <= 10 ? valor.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3") : valor.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
     e.target.value = valor;
+});
+
+
+botaoLogin.addEventListener('click', (e)=>{
+    e.preventDefault();
+     if (!email.value.includes("@")) {
+        alert("Digite um e-mail válido.");
+        return;
+    }
+
+      if(senha.value < 4){
+        alert('a senha deve conter ao menos 4 digitos');
+        return;
+    }
+
+    alert('usuário logado com sucesso!');
+
 });
