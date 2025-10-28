@@ -35,11 +35,11 @@ btnCalculo.addEventListener('click', ()=>{
 
 
     if (valorFinal <= 0.25){
-         resultadoImg.src = 'ims/lampada-verde.png';
+         resultadoImg.src = '/INFOLIGHTFOA/ims/lampada-verde.png';
      } else if ((valorFinal >= 0.26) && (valorFinal < 2.00)){
-          resultadoImg.src = 'ims/lampada-amarela.png'; 
+          resultadoImg.src = '/INFOLIGHTFOA/ims/lampada-amarela.png'; 
      } else if (valorFinal > 2.00){
-          resultadoImg.src = 'ims/lampada-vermelha.png';
+          resultadoImg.src = '/INFOLIGHTFOA/ims/lampada-vermelha.png';
     }
     
 });
