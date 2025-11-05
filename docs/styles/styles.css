@@ -3,23 +3,30 @@
 @import url('./calculadora.css');
 
 
+html{
+    width:100%;
+}
+
 *{
     margin: 0;
     padding: 0;
     color: oklch(98.2% 0.018 155.826);
     font-family: 'poppins', sans-serif;
+    box-sizing: border-box; 
 }
 
 body{
     background-color: oklch(20.8% 0.042 265.755);
     width: 100%;
+    overflow-x: hidden;
+
 }
 
 .cabeçalho{
     background: linear-gradient(45deg,oklch(31.644% 0.0591 269.666), oklch(27.9% 0.041 260.031)) ;
     display: flex;
     justify-content: space-between;
-    padding: 10px 100px;
+    padding: 10px 5vw;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     
 }
@@ -150,7 +157,7 @@ h2,b{
 }
 
 .third-text p{
-    font-size: 17px;
+    font-size: 1.3rem;
 }
 
 .third-text{
@@ -160,53 +167,54 @@ h2,b{
         flex-direction: column;
 }
 
-.main-grid{
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
+.main-grid {
+    /* Centraliza o container principal do grid */
+    margin: 30px auto 0; /* Centraliza horizontalmente */
+    width: fit-content; /* Permite que o container se ajuste ao conteúdo, mas ainda seja centralizável */
+    max-width: 100%; /* Garante que não estoure */
     
 }
 
-.items-column{
-    display: flex;
-}
-
-.first-column{
-    list-style: none;
-    display: flex;
-    
-}
-
-.second-column{
-    list-style: none;
-    
-}
-
-.items-column-first{
-    display: flex;
+.items-column-first, .items-column-second {
+    /* Garante que o conteúdo das colunas se alinhe */
     justify-content: center;
 }
 
-.items-column-second{
-    display: flex;
-    justify-content: center;
+.first-column, .second-column {
+    list-style: none;
+    display: flex; /* Mantém os itens um ao lado do outro na coluna (desktop) */
+    gap: 40px; /* Adiciona um espaço fixo entre os itens da coluna */
+    padding-inline-start: 0; /* Remove o padding padrão da lista */
 }
 
-.second-column{
+.grid-item {
     display: flex;
+    flex-direction: column; /* Coloca o texto abaixo da imagem para melhor visualização */
+    align-items: center; /* Centraliza a imagem e o texto verticalmente */
+    text-align: center;
+    margin: 1em 1em; /* Ajusta as margens */
 }
 
-.grid-item{
-    display: flex;
-    align-items: center;
-    margin: 1em 
-}
-.grid-item img{
-    margin-right:1em;
+.grid-item img {
+    margin-right: 0; /* Remove a margem direita desnecessária, já que o texto está abaixo */
+    margin-bottom: 0.5em; /* Adiciona um pequeno espaço entre a imagem e o texto */
+    width: 60px; /* Tamanho fixo para os ícones */
+    height: 60px;
 }
 
-.grid-item p{
-    color: oklch(76.5% 0.177 163.223)
+.grid-item p {
+    /* Ajustes de estilo para o texto (se necessário) */
+    font-size: 16px; 
+}
+
+.container{
+        background-color: oklch(37.173% 0.04497 257.445 / 0.671);
+
+}
+
+.container.swiper{
+    padding: 5rem 0;
+
 }
 
 .swiper-section-link{
@@ -237,10 +245,11 @@ footer{
 }
 
 @media screen and (max-width:1024px){
-    
+
     .first-section{
         display: flex;
         flex-direction: column;
+        width: 100vw; /* Use 100vw para garantir a largura total */
         width: 100%;
         justify-content: center;
         align-items: center;
@@ -251,6 +260,7 @@ footer{
         justify-content: center;
         margin: 0 auto;
         justify-content: center;
+        text-align: center;
     }
 
     .first-section-title{
@@ -271,12 +281,19 @@ footer{
     .second-section{
         display: flex;
         flex-direction: column;
+        text-align: center;
+        width: 100vw;
     }
 
     .second-section-items{
         order:1;
         width:70%;
-        font-size: 1.4rem;
+        font-size: 2rem;
+    }
+
+    .second-section-text{
+    font-size: 1.5rem;
+
     }
 
     .second-section-title{
@@ -296,6 +313,50 @@ footer{
         margin-top:2em;
         max-width: 60%;
     }
+
+    .main-grid {
+        display: flex;
+        flex-direction: column; /* Empilha as colunas */
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 2em;
+        width: 100%;
+    }
+
+    .first-column,
+    .second-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Quebra linha caso precise */
+        gap: 30px;
+        padding-inline-start: 0;
+    }
+
+    .grid-item {
+        margin: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-item img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 8px;
+    }
+
+    .third-text h2 {
+        font-size: 2em;
+    }
+
+    .third-text p {
+        font-size: 1.2em;
+        padding: 0 1em;
+    }
+
 
     .third-text h2{
         font-size: 2.6em;
@@ -390,4 +451,194 @@ label{
 }
 option{
     color: #000000;
+}
+
+@media screen and (max-width: 600px) {
+    .first-column,
+    .second-column {
+        flex-direction: column; /* Um ícone por linha */
+        gap: 20px;
+    }
+
+    .grid-item img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .third-text h2 {
+        font-size: 1.8em;
+    }
+
+    .third-text p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /* CABEÇALHO */
+    .cabeçalho {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 1em 0;
+    }
+
+    .logo-titulo img {
+        height: 70px;
+    }
+
+    .logo-titulo h1 {
+        font-size: 1.5em;
+    }
+
+    .navegação {
+        width: 100%;
+          text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lista {
+        flex-direction: column;
+        gap: 10px;
+      
+    }
+
+    .login-button {
+        width: 80%;
+        padding: 10px 0;
+    }
+
+    /* PRIMEIRA SEÇÃO */
+    .first-section {
+        flex-direction: column;
+        width: 100%;
+        padding: 1em;
+        margin-top: 4em;
+        
+    }
+
+    .first-img{
+        display:flex;
+        justify-content: center;
+    }
+
+    .section-text {
+        width: 90%;
+        text-align: center;
+    }
+
+    .first-section-text {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .first-section img {
+        width: 85%;
+        margin-top: 1.5em;
+    }
+
+    /* SEGUNDA SEÇÃO */
+    .second-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2em 1em;
+    }
+
+    .second-section-items {
+        width: 90%;
+    }
+
+    .second-section-text {
+        font-size: 1rem;
+    }
+
+    .second-img img {
+        width: 80%;
+        margin-top: 1em;
+    }
+
+    /* TERCEIRA SEÇÃO */
+    .third-section {
+        margin: 3em 0;
+    }
+
+    .third-text h2 {
+        font-size: 1.6em;
+    }
+
+    .third-text p {
+        font-size: 1em;
+        padding: 0 1em;
+    }
+
+    .main-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .first-column,
+    .second-column {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .grid-item p {
+        font-size: 0.9em;
+    }
+
+    /* CARDS (SWIPER) */
+    .container.swiper {
+        padding: 3em 0;
+    }
+
+    .card-list .card-img {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /* CALCULADORA (caso use a mesma página) */
+    .calc-section {
+        margin: 4em 0;
+        padding: 0 1em;
+    }
+
+    .calc-title {
+        font-size: 1.8em;
+    }
+
+    .valores-div {
+        width: 90%;
+    }
+
+    .calc-input {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    .btn-calc {
+        width: 70%;
+    }
+
+    .resultado-img {
+        width: 90%;
+    }
+
+    /* RODAPÉ */
+    footer {
+        font-size: 0.9em;
+        padding: 1.5em;
+    }
 }

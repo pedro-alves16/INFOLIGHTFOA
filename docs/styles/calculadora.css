@@ -8,7 +8,7 @@
 body{
     height: 100vw;
     font-family: 'Roboto';
-    background-color: hsl(210 20% 98%);
+    background-color: oklch(20.8% 0.042 265.755);
 }
 
 
@@ -186,4 +186,136 @@ button{
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+/* 📱 RESPONSIVIDADE PARA CELULARES */
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    .text-container h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .text-container p {
+        text-align: center;
+        font-size: 1rem;
+        padding: 0 1em;
+    }
+
+    .home-botao {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* CALCULADORA PRINCIPAL */
+    .calculadora-body {
+        width: 90%;
+        padding: 2em 1.2em;
+        margin: 1.5em auto;
+    }
+
+    .calculadora-title {
+        justify-content: center;
+    }
+
+    .calculadora-title p {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    /* Colunas viram uma embaixo da outra */
+    .calculadora-main-div {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .coluna-calculadora {
+        width: 100%;
+    }
+
+    input {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.8rem;
+        margin-top: 1rem;
+    }
+
+    /* RESULTADOS */
+    .resultados-texto {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .resultados-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-consumo-mensal {
+        width: 100%;
+        text-align: center;
+    }
+
+    .resultado-titulo-card {
+        font-size: 1rem;
+    }
+
+    .mensal,
+    .custo,
+    .diario {
+        font-size: 1.1rem;
+    }
+
+    /* TARIFA */
+    .tarifa-card {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .tarifa-card p {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+}
+
+/* 📱 Ajuste extra para telas muito pequenas (até 480px) */
+@media screen and (max-width: 480px) {
+    .text-container h1 {
+        font-size: 1.7rem;
+    }
+
+    .calculadora-body {
+        width: 95%;
+        padding: 1.5em 1em;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
+
+    .card-consumo-mensal {
+        padding: 0.8rem;
+    }
+
+    .resultado-titulo-card {
+        font-size: 0.9rem;
+    }
+
+    .mensal,
+    .custo,
+    .diario {
+        font-size: 1rem;
+    }
 }
