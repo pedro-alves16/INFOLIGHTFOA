@@ -5,31 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script/validacaoLogin.js" defer></script>
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="icon" href="ims/favicon-32x32.png">
     <title>LOGIN</title>
 </head>
 <body>
   <main>
     <div class="login-box">
-        <img src="ims/Group.png" alt="" class="login-icon">
-        <h1 class="login-title">Entrar</h1>
+      <div class="home-botao">
+        <a href="index.html"> <img src="ims/X- White.png" alt="" width="60" height="60">Voltar</a>
+      </div>
+      <div class="conteudo-box">
+        <h1 class="Titulo">Login</h1>
 
-        <form class="input-box" id="formulario-login">
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email-login">
-
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha-login">
-
-            <button type="submit" id="login-button">Entrar</button>
-        </form>
-
-        <p>Ao conectar-se você concorda com os termos de uso e condições.</p>
-        <a href="#" class="redefinirSenhaBotao">Esqueceu a senha?</a>
-        <div class="novo-por-aqui">
-            <span>Novo por aqui?</span>
+        <div class="info">
+          <div class="retangulo">
+            <h2>Email</h2>
+              <form id="formulario-login">
+                <input type="email" name="email" id="email-login" placeholder="exemple@gmail.com" required>
+              </form>
+          </div>
+                    
+            <div class="retangulo">
+              <h2>Senha</h2>
+                <input type="text" name="password" id="senha-login" placeholder="Digite a sua senha!" required>
+          </div>
+                  
+          <button type="submit"  id="login-button">Entrar</button>
+          </form>
+          <br><br>
+          <p>Ao conectar-se você concorda com os termos de uso e condições.</p>
+          <br>
+          <p><a href="#">ESQUECI A SENHA</a> | <a href="cadastro.html">CRIAR CONTA</a></p>
         </div>
-        <a href="cadastro.html" class="criar-conta-botao">CRIAR CONTA</a>
     </div>
+    <br><br>
   </main>
 </body>
 </html>
