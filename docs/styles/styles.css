@@ -585,7 +585,7 @@ option{
     }
 
     .login-button {
-        width: 80%;
+        width: fit-content;
         padding: 10px 0;
     }
 

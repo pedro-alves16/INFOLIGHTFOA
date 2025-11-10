@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/login.css">
     <link rel="icon" href="ims/favicon-32x32.png">
-    <script src="script/validacao.js" defer></script>
+    <script src="script/validacaoCadastro.js" defer></script>
     <title>CADASTRO</title>
 </head>
 <body>
   <main>
-    <div class="login-box-cadastro">
+    <form class="login-box-cadastro">
       <div class="home-botao">
         <a href="login-page.html"> <img src="ims/X- White.png" alt="" width="60" height="60">Voltar</a>
       </div>
@@ -24,7 +24,7 @@
                     
           <div class="retangulo">
             <h2>Telefone</h2>
-            <input type="number" id="telefone" placeholder="(XX) XX-XXXXX-XXXX" maxlength="15" required>
+            <input type="text" id="telefone" placeholder="(XX) XX-XXXXX-XXXX" maxlength="15" required>
           </div>
                     
           <div class="retangulo">
@@ -37,40 +37,6 @@
             <input type="number" id="senha" placeholder="Digite a sua senha!" required>
           </div>
 
-          <div class="retangulo">
-            <label for="seletor"> Estado
-            <select name="estado" id="seletor" class="dropdown" required>
-              <option value="placeholder">Opções</option>
-              <option value="AC">Acre</option>
-              <option value="AL">Alagoas</option>
-              <option value="AP">Amapá</option>
-              <option value="AM">Amazonas</option>
-              <option value="BA">Bahia</option>
-              <option value="CE">Ceará</option>
-              <option value="DF">Distrito Federal</option>
-              <option value="ES">Espírito Santo</option>
-              <option value="GO">Goiás</option>
-              <option value="MA">Maranhão</option>
-              <option value="MT">Mato Grosso</option>
-              <option value="MS">Mato Grosso do Sul</option>
-              <option value="MG">Minas Gerais</option>
-              <option value="PA">Pará</option>
-              <option value="PB">Paraíba</option>
-              <option value="PR">Paraná</option>
-              <option value="PE">Pernambuco</option>
-              <option value="PI">Piauí</option>
-              <option value="RJ">Rio de Janeiro</option>
-              <option value="RN">Rio Grande do Norte</option>
-              <option value="RS">Rio Grande do Sul</option>
-              <option value="RO">Rondônia</option>
-              <option value="RR">Roraima</option>
-              <option value="SC">Santa Catarina</option>
-              <option value="SP">São Paulo</option>
-              <option value="SE">Sergipe</option>
-              <option value="TO">Tocantins</option>
-            </select>
-            </label>
-          </div>
                     
           <button type="submit">Criar conta</button>
           <br><br>
@@ -79,7 +45,7 @@
           <p>Possui uma conta? <a href="login-page.html">LOGAR</a></p>
         </div>
       </div>
-    </div>
+    </form>
   </main>
 </body>
 </html>

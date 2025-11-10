@@ -188,7 +188,56 @@ button{
     gap: 0.5rem;
 }
 
-/* 📱 RESPONSIVIDADE PARA CELULARES */
+
+dialog {
+
+  position: absolute; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  margin: 0;
+  border-radius: 8px;
+  border: none;
+  padding: 3rem;
+  display:flex;
+  flex-direction: column;
+  gap: 1rem;
+    
+}
+
+dialog::backdrop {
+  /*
+  Usamos o formato RGBA:
+  R: Red (Vermelho) - 0
+  G: Green (Verde) - 0
+  B: Blue (Azul) - 0 (Preto puro)
+  A: Alpha (Transparência) - de 0.0 (totalmente transparente) a 1.0 (opaco)
+  */
+  
+  /* Exemplo: Fundo preto com 80% de opacidade (bem escuro) */
+  background-color: rgba(49, 46, 46, 0.8);
+}
+
+dialog:modal {
+    margin: auto;
+}
+
+dialog {
+  inset: 0; 
+  margin: auto; 
+  
+  width: fit-content; /* ou um valor fixo, ex: 80% */
+  height: fit-content; /* ou um valor fixo, ex: 300px */
+}
+
+dialog:modal {
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+
 @media screen and (max-width: 768px) {
 
     body {
