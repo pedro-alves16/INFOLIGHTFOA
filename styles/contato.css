@@ -1,0 +1,42 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d1117;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  box-shadow: 0 0 15px rgba(0, 255, 100, 0.15);
+}
+
+form .form-control:focus {
+  border-color: #00ff88;
+  box-shadow: 0 0 10px #00ff8855;
+}
+
+.btn-success {
+  background-color: #00ff88;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-success:hover {
+  background-color: #00cc6a;
+  transform: scale(1.02);
+}
+
+.card {
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 100, 0.25);
+}
+
+footer {
+  background-color: #0b0f14;
+  color: #aaa;
+}

@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27);
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'poppins', sans-serif;
+    font-size: 17px;
+}
+
+body{
+    background-image: url(/ims/Fundo-Pagina.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+    color: oklch(88.423% 0.19529 160.335);
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+
+.Titulo{
+    text-align: center;
+    font-size: 45px;
+    color: oklch(88.423% 0.19529 160.335);
+    
+    margin-bottom: 70px;
+}
+
+h2{
+    color: oklch(76.5% 0.177 163.223);
+    margin-left: 35px;
+    margin-bottom: 5px;
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box{
+    background-color: oklch(20.841% 0.04169 266.371 / 0.712);
+    width: 600px;
+    height:93dvh;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px 2px rgba(32, 53, 85, 0.74);
+}
+
+.retangulo{
+    background-color: oklch(20.314% 0.02453 273.233);
+    width: 430px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 2px rgba(154, 223, 255, 0.205);
+    margin-bottom: 50px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin-bottom: 18px;
+    margin-left: 17px;
+    width: 380px;
+    align-items: center;
+    padding: 4px;
+    border-radius: 14px;
+}
+
+button{
+    color: rgb(255, 255, 255);
+    width: 30%;
+    padding: 0.7em;
+    border-radius: 15px;
+    border:none;
+    background-color: oklch(20.314% 0.02453 273.233);
+    box-shadow: 0px 0px 15px 2px rgba(154, 223, 255, 0.205);
+    margin-top:40px;
+    padding:1em;
+    font-size:1em;
+}
+button:hover{
+    background-color: rgb(0, 255, 170);
+    box-shadow: 0px 0px 25px 2px rgb(243, 255, 135);
+    color: black;
+}
+p{
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 15px;
+}
+
+.links{
+    color: oklch(84.5% 0.143 164.978);
+}
+a{
+    text-decoration: none;
+    color: oklch(72.065% 0.15163 249.419);
+}
+.login-box-cadastro{
+    background-color: oklch(20.841% 0.04169 266.371 / 0.712);
+    width: 600px;
+    height:140dvh;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius:15px;
+    box-shadow: 0px 0px 25px 2px rgba(37, 64, 90, 0.74);
+}
+.dropdown{
+    padding: 5px;
+    border: 1px solid #848484;
+    border-radius: 15px;
+    margin-left: 24px;
+    width: 380px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+::placeholder{
+    color: #000000a4;
+}
+.home-botao{
+    display: flex;
+    width: fit-content;
+    border-radius: 40px;
+    padding: 0.5rem;
+    color: #ffffff;
+    margin-left: 9px;
+    margin-top: 0.5rem;
+}
+.home-botao:hover{
+  background-color: #58799e2f;
+}
+
+.home-botao a{
+    text-decoration: none;
+    color:#ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Media queries responsivas para 1024px / 768px / 480px */
+@media (max-width: 1024px) {
+  /* Tablets / laptops pequenos */
+  .login-box,
+  .login-box-cadastro {
+    width: 80%;
+    padding: 1.5em;
+    box-sizing: border-box;
+    margin-top: 30px;
+  }
+
+  .retangulo {
+    width: 100%;
+  }
+
+  input,
+  .dropdown {
+    width: 90%;
+    margin-left: 0;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Celulares grandes / tablets pequenos */
+  .login-box,
+  .login-box-cadastro {
+    width: 70%;
+    padding: 1.5em;
+  }
+
+  .login-title {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  button,
+  .criar-conta-botao {
+    width: 100%;
+  }
+
+  input,
+  .dropdown {
+    width: 94%;
+    margin-left: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Celulares pequenos */
+  .login-box,
+  .login-box-cadastro {
+    width: 95%;
+    padding: 1em;
+    border-radius: 12px;
+  }
+
+  input,
+  .dropdown {
+    font-size: 0.95em;
+    padding: 0.6em;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 0.8em;
+    width: 100%;
+  }
+
+  label {
+    font-size: 0.8em;
+  }
+
+  p {
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
