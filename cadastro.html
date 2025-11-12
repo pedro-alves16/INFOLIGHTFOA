@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="icon" href="ims/favicon-32x32.png">
+    <script src="script/validacaoCadastro.js" defer></script>
+    <title>CADASTRO</title>
+</head>
+<body>
+  <main>
+    <form class="login-box-cadastro">
+      <div class="home-botao">
+        <a href="login-page.html"> <img src="ims/X- White.png" alt="" width="60" height="60">Voltar</a>
+      </div>
+      <div class="conteudo-box">
+        <h1>Cadastro</h1>
+        <div class="info">
+          <div class="retangulo">
+            <h2>Nome completo</h2>
+            <input type="name" id="nome" placeholder="Digite seu nome aqui!" required>
+          </div>
+                    
+          <div class="retangulo">
+            <h2>Telefone</h2>
+            <input type="text" id="telefone" placeholder="(XX) XX-XXXXX-XXXX" maxlength="15" required>
+          </div>
+                    
+          <div class="retangulo">
+            <h2>Email</h2>
+            <input type="email" id="email" placeholder="Example@gmail.com" required>
+          </div>
+                    
+          <div class="retangulo">
+            <h2>Senha</h2>
+            <input type="number" id="senha" placeholder="Digite a sua senha!" required>
+          </div>
+
+                    
+          <button type="submit">Criar conta</button>
+          <br><br>
+          <p>Ao conectar-se você concorda com os termos de uso e condições.</p>
+          <br>
+          <p>Possui uma conta? <a href="login-page.html">LOGAR</a></p>
+        </div>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
