@@ -57,7 +57,6 @@ botao.addEventListener('click', (e) =>{
     const valorPotencia = Number(inputPotencia.value);
     const valorDias = Number(inputDiasMes.value);
     const valorHoras = Number(inputHoras.value);
-    const valorTarifa = tarifa;
 
     const resultadoKwh = calcularConsumoKwh(valorPotencia, valorHoras);
 
@@ -84,15 +83,28 @@ window.addEventListener('load', () => {
 
 const botalModal = document.getElementById('modal-button');
 
+
+
 botalModal.addEventListener('click', async () => {
+
     const valorCep = inputCep.value;
 
-   const dadosDoEstado = await buscarEstado(valorCep);
-   console.log(dadosDoEstado);
+    if(!inputCep.value){
+        criaErro(inputCep, 'Nenhum Cep Digitado');
+        return;
+    }
+
+    const dadosDoEstado = await buscarEstado(valorCep);
+    console.log(dadosDoEstado);
+
+    
 
    if(tarifasPorEstado[dadosDoEstado]){
     tarifa = tarifasPorEstado[dadosDoEstado];
-   };   
+   } else {
+        criaErro(inputCep, 'CEP inválido ou inexistente');
+        return;
+   }
 
    inputTarifa.value = tarifa.toFixed(2);
 
@@ -117,3 +129,19 @@ inputCep.addEventListener('input', (e) => {
     let valor = e.target.value.replace(/\D/g, '');
     inputCep.value = valor;
 })
+
+function criaErro(campo, msg){
+    
+    const erroAnterior = campo.nextElementSibling;
+    if(erroAnterior && erroAnterior.classList.contains('error-modal')){
+        erroAnterior.remove();
+    }
+
+    const divErro = document.createElement('div');
+    
+    divErro.innerText = msg;
+    divErro.classList.add('error-modal');
+
+    campo.insertAdjacentElement('afterend', divErro);
+
+}
