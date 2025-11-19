@@ -143,5 +143,10 @@ function criaErro(campo, msg){
     divErro.classList.add('error-modal');
 
     campo.insertAdjacentElement('afterend', divErro);
-
 }
+
+inputCep.addEventListener('input', e => {
+    let valor = e.target.value;
+    valor = valor.substring(0, 8);
+    inputCep.value = valor;
+})
