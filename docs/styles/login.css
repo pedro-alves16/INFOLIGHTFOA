@@ -230,3 +230,10 @@ a{
     text-align: center;
   }
 }
+
+.error-modal{
+  display: flex;
+    color: red;
+    font-size: 1.25rem;
+    justify-content: center;
+}
