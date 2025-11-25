@@ -19,7 +19,6 @@ body{
     background-color: oklch(20.8% 0.042 265.755);
     width: 100%;
     overflow-x: hidden;
-
 }
 
 .cabeçalho{
@@ -28,7 +27,6 @@ body{
     justify-content: space-between;
     padding: 10px 5vw;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    
 }
 
 .logo-titulo{
